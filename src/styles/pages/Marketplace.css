@@ -56,3 +56,9 @@
     margin-top: 0px;
     font-size: 18px;
 }
+.rating {
+    display: flex;
+}
+.star {
+    color: gold;
+}

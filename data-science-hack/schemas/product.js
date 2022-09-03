@@ -26,6 +26,11 @@ export default {
       },
     },
     {
+      name: "rating",
+      title: "Rating",
+      type: "number"
+    },
+    {
       name: "price",
       title: "Price",
       type: "number",

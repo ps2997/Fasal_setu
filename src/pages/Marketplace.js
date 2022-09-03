@@ -4,6 +4,7 @@ import Loader from "../assets/loader.png";
 import "../App.css";
 import "../styles/pages/Marketplace.css";
 import { motion } from "framer-motion";
+import { AiFillStar } from "react-icons/ai";
 
 function Marketplace() {
   const [data, setData] = useState();
@@ -41,14 +42,16 @@ function Marketplace() {
           <div className="marketItemBody">
             {data.map((item) => {
               var arr = []
-              for(let i=0; i<5; i++)
+              for(let i=0; i<item.rating; i++)
                 arr.push('a')
               return (
                 <div className="marketItem">
                   <img src={urlFor(item.image)} alt="item" />
                   <h1>{item.name}</h1>
                   <p>₹ {item.price}</p>
-                  {arr.map(star => (<h1>*</h1>))}
+                  <div className="rating">
+                    {arr.map(star => (<AiFillStar className="star"/>))}
+                  </div>
                 </div>
               )})}
           </div>
