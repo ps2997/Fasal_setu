@@ -1,0 +1,15 @@
+.navbarBody {
+    margin: 0px;
+    height: 105px;
+    background-image: linear-gradient(90deg, #043F16, #538116, #7D932C, #B5AC49);
+    width: 100vw;
+    overflow: hidden;
+    z-index: -1;
+}
+.navbarBody img {
+    height: 210px;
+    z-index: 4;
+    position: absolute;
+    left: 200px;
+    cursor: pointer;
+}
