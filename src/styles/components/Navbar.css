@@ -5,6 +5,7 @@
     width: 100vw;
     overflow: hidden;
     z-index: -1;
+    font-family: 'Inter', sans-serif;
 }
 .navbarBody img {
     height: 210px;
@@ -12,4 +13,28 @@
     position: absolute;
     left: 200px;
     cursor: pointer;
+}
+
+.navbarLinks {
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 55vw;
+    justify-content: space-evenly;
+    height: 105px;
+    position: absolute;
+    right: 0px;
+}
+.navbarLink {
+    text-decoration: none;
+    color: #F3F3F3;
+    transition: all 0.15s linear;
+}
+.navbarLink:hover {
+    color: #F4EC90;
+}
+
+.active {
+    color: #F4EC90;
 }

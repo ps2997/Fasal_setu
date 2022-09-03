@@ -1,0 +1,46 @@
+.businessBody {
+    width: 100vw;
+    height: calc(100vh - 105px);
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+.businessBG {
+    margin-left: 40vw;
+    height: calc(100vh - 105px);
+    background-image: url("../../assets/businessBG.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.businessText {
+    position: absolute;
+    top: 125px;
+    left: 100px;
+    width: 50vw;
+}
+.businessText h1 {
+    overflow-y: hidden;
+    font-size: 54px;
+    line-height: 66px;
+}
+.businessText p {
+    margin: 0px;
+    margin-top: 25px;
+    font-size: 24px;
+}
+.businessText button {
+    font-size: 24px;
+    padding: 20px;
+    background-color: green;
+    border: 0px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 25px;
+    color: white;
+    transition: all 0.15s linear;
+}
+.businessText button:hover {
+    background-color: lightgreen;
+    color: black;
+}
