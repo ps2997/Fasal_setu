@@ -5,6 +5,26 @@
     height: calc(100vh - 105px);
     font-family: 'Inter', sans-serif;
 }
+
+.weatherLoad {
+    color: rgb(254, 187, 17);
+    font-size: 72px;
+    text-align: center;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    animation-name: weatherLoading;
+    animation-timing-function: linear;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes weatherLoading {
+    0% {transform: rotate(0deg);}
+    50% {transform: rotate(180deg);}
+    100%{transform: rotate(360deg);}
+}
+
 .weatherbg img {
     height: calc(100vh - 105px);
     position: absolute;

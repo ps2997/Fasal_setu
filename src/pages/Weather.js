@@ -3,6 +3,7 @@ import "../styles/pages/Weather.css";
 import weatherbg from "../assets/WeatherBG.png";
 import { BsCloudSun, BsFillCloudDrizzleFill, BsWind } from "react-icons/bs";
 import { motion } from "framer-motion";
+import { FiSun } from "react-icons/fi";
 
 const Weather = () => {
 
@@ -41,7 +42,7 @@ const Weather = () => {
       transition={{duration: 0.25}}
       className="weatherBody">
       {load ? (
-        <h1>Load</h1>
+        <FiSun className='weatherLoad' />
       ) : (
         <div>
           <motion.div 
