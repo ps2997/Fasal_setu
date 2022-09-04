@@ -35,7 +35,7 @@ const Home = () => {
 
       {/* middle section */}
       <div className="homeMid">
-        <img src={homeMid} alt="home top" />
+        <img src={homeMid} alt="home top"/>
         <p>
           <span>Fasal Setu</span> is a one-stop platform for all the things
           related to farming. We are a B2B focused company, selling high quality
