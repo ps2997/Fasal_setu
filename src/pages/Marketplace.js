@@ -19,8 +19,6 @@ function Marketplace() {
     console.log(products)
   };
 
-  const len = 5;
-
   useEffect(() => {
     fetchData();
   }, []);
@@ -38,22 +36,28 @@ function Marketplace() {
       ) : (
         <div className="marketSubBody">
           <h1>Marketplace</h1>
-          <p>Where you can buy farmer's own made food!</p>
+          <p>
+            Homegrown, the delicious-yet-healthy Village food you've been
+            craving. We provide real food that tastes like your grandma made it,
+            but with the convenience of door step delivery.
+          </p>
           <div className="marketItemBody">
             {data.map((item) => {
-              var arr = []
-              for(let i=0; i<item.rating; i++)
-                arr.push('a')
+              var arr = [];
+              for (let i = 0; i < item.rating; i++) arr.push("a");
               return (
                 <div className="marketItem">
                   <img src={urlFor(item.image)} alt="item" />
                   <h1>{item.name}</h1>
                   <p>₹ {item.price}</p>
                   <div className="rating">
-                    {arr.map(star => (<AiFillStar className="star"/>))}
+                    {arr.map((star) => (
+                      <AiFillStar className="star" />
+                    ))}
                   </div>
                 </div>
-              )})}
+              );
+            })}
           </div>
         </div>
       )}

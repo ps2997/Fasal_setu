@@ -8,11 +8,21 @@ const Business = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 0.25 }}
       className="businessBody"
     >
-      <div className='businessBG'></div>
-      <div className='businessText'>
+      <motion.div
+        initial={{opacity: 0}}
+        animate={{opacity: 1}}
+        transition={{delay: 0.25, duration: 0.5}}
+        className='businessBG'>
+      </motion.div>
+      <motion.div 
+        initial={{opacity: 0}}
+        animate={{opacity: 1}}
+        transition={{delay: 0.75, duration: 0.5}}
+        className='businessText'
+      >
         <h1>Benefit from India’s fastest Supply Chain for Fresh Produce</h1>
         <p>
           Fasal Setu sources directly from farmers and moves fresh produce to
@@ -21,7 +31,7 @@ const Business = () => {
         <button>
           Know More
         </button>
-      </div>
+      </motion.div>
     </motion.div>
   );
 }

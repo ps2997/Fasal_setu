@@ -1,52 +1,79 @@
-.weatherSubBody {
-    max-width: 100vw;
-    height: calc(100vh - 75px);
-    overflow-x: hidden;
-    background-image: url("../../assets/weatherImg.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: 'Roboto', sans-serif;
-}
-.weatherHeading {
-    text-align: center;
-}
-.weatherBox {
+.weatherBody {
+    background-image: radial-gradient(#AEFFDD18 0%, #E5E16135 18%, #EFF0DD25 100%);
+    overflow-y: hidden;
     width: 100vw;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    align-content: flex-start;
+    height: calc(100vh - 105px);
+    font-family: 'Inter', sans-serif;
 }
-.weatherOne {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    justify-content: space-evenly;
-    margin-top: 50px;
-    width: 25vw;
-    height: fit-content;
-    background-color: white;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 10px;
+.weatherbg img {
+    height: calc(100vh - 105px);
+    position: absolute;
+    right: 0px;
 }
-.weatherTwo {
-    margin-left: auto;
-    margin-right: auto;
-    width: 25vw;
-    margin-top: 50px;
-    padding: 10px;
-    background-color: white;
-    border-radius: 10px;
+.weatherTitle {
+    font-family: 'Inter', sans-serif;
+    margin-top: 150px;
+    margin-left: 50px;
+}
+.weatherTitle h1 {
+    font-size: 96px;
+}
+.weatherTitle h2 {
+    font-size: 72px;
 }
 
-.weather {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    font-size: 24px;
-    padding: 10px;
+.weatherBox {
+    position: absolute;
+    background-color: white;
+    width: 200px;
+    height: fit-content;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px gray;
+    transition: all 0.1s linear;
 }
-.weather:nth-child(1) {
-    font-size: 48px;
+.weatherBox:hover {
+    transform: scale(1.025);
+}
+.box1 {
+    right: 700px;
+    top: 250px;
+}
+.currentTemp {
+    text-align: center;
+    margin-top: 10px;
+}
+.currentTemp p {
+    margin-bottom: 10px;
+}
+.cloud {
+    font-size: 56px;
+    color: skyblue;
+}
+.currentTemp h1 {
+    margin-top: 10px;
+    color: gray;
+}
+
+.box2 {
+    right: 450px;
+    top: 150px;
+    max-width: 300px;
+}
+.box2 p{
+    text-align: center;
+}
+.wind {
+    color: sandybrown;
+    font-size: 56px;
+}
+
+.box3 {
+    right: 450px;
+    top: 350px;
+    max-width: 300px;
+}
+.drizzle {
+    color: darkgray;
+    font-size: 56px;
 }

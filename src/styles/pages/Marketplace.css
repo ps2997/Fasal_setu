@@ -1,5 +1,5 @@
 .marketBody {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 .marketSubBody{
     text-align: center;
@@ -7,12 +7,19 @@
 }
 .marketSubBody h1 {
     font-size: 48px;
-    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'Inter', sans-serif;
     color: #A7A642;
 }
+.marketBody h1:first-child {
+    color: black;
+}
 .marketSubBody p {
-    font-size: 24px;
+    font-size: 16px;
+    color: grey;
     margin-top: 15px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .marketItemBody{
     width: 100vw;

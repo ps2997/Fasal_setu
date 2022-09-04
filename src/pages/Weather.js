@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { TiWeatherPartlySunny, TiWeatherWindy } from "react-icons/ti";
-import { WiHumidity } from "react-icons/wi";
 import "../styles/pages/Weather.css";
+import weatherbg from "../assets/WeatherBG.png";
+import { BsCloudSun, BsFillCloudDrizzleFill, BsWind } from "react-icons/bs";
+import { motion } from "framer-motion";
 
 const Weather = () => {
 
@@ -24,7 +25,7 @@ const Weather = () => {
       .then((response) => response.json())
       .then((data) => {
         setData(data);
-        console.log(data)
+        console.log(data);
         setLoad(false);
       });
       // eslint-disable-next-line
@@ -33,51 +34,76 @@ const Weather = () => {
   console.log(data)
 
   return (
-    <div>
+    <motion.div 
+      initial={{opacity: 0}}
+      animate={{opacity: 1}}
+      exit={{opacity: 0}}
+      transition={{duration: 0.25}}
+      className="weatherBody">
       {load ? (
         <h1>Load</h1>
       ) : (
-        <div className="weatherSubBody">
+        <div>
+          <motion.div 
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            transition={{delay: 0.25, duration: 0.5}}
+            className="weatherbg"
+          >
+            <img src={weatherbg} alt="weather bg" />
+          </motion.div>
 
-          <div className='weatherHeading'>
-            <h1>
-              Weather Reports
-            </h1>
-            <p>Get information about the current weather reports and plan your day accordingly.</p>
-          </div>
+          <motion.div
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            transition={{delay: 0.75, duration: 0.5}}
+            className="weatherTitle"
+          >
+            <h1>Weather</h1>
+            <h2>Forecast</h2>
+          </motion.div>
 
-          <div className='weatherBox'>
-
-            <div className='weatherOne'>
-              <div className="weather">
-                <p>{data.current.condition.text}</p>
-              </div>
-
-              <div className="weather">
-                <TiWeatherPartlySunny className="weatherIcon" />
-                <p>{data.current.temp_c}</p>
-              </div>
-
-              <div className="weather">
-                <TiWeatherWindy className="weatherIcon" />
-                <p>
-                  {data.current.wind_kph} {data.current.wind_dir}
-                </p>
-              </div>
-
-              <div className="weather">
-                <WiHumidity className="weatherIcon" />
-                <p>{data.current.humidity}</p>
-              </div>
+          <motion.div
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            transition={{delay: 1, duration: 0.5}}
+            className="weatherBox box1"
+          >
+            <div className="currentTemp">
+              <p>{data.location.name}</p>
+              <BsCloudSun className="cloud" />
+              <h1>{data.current.temp_c}°C</h1>
             </div>
+          </motion.div>
 
-            <div className='weatherTwo'>
-            
+          <motion.div
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            transition={{delay: 1, duration: 0.5}}
+            className="weatherBox box2"
+          >
+            <div className="currentTemp">
+              <BsWind className="cloud wind" />
+              <h1>
+                {data.current.wind_kph} Kph {data.current.wind_dir}
+              </h1>
             </div>
-          </div>
+          </motion.div>
+
+          <motion.div
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            transition={{delay: 1, duration: 0.5}}
+            className='weatherBox box3'
+          >
+            <div className="currentTemp">
+              <BsFillCloudDrizzleFill className="cloud drizzle" />
+              <h1>{data.current.humidity}%</h1>
+            </div>
+          </motion.div>
         </div>
       )}
-    </div>
+    </motion.div>
   );
 }
 
